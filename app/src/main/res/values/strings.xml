@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">OssLicenseTestApp</string>
+    <string name="show_me_the_license">Show me the license</string>
+
 </resources>
