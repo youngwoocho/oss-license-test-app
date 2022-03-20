@@ -35,6 +35,14 @@ android {
     }
 }
 
+aboutLibraries {
+    configPath = "config"
+    additionalLicenses {
+        mit
+        bsd_3_clause
+    }
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.google.android.material:material:1.1.0'

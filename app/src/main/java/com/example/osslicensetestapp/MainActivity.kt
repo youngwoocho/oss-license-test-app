@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.osslicensetestapp.databinding.ActivityMainBinding
 import com.mikepenz.aboutlibraries.LibsBuilder
-import kotlinx.coroutines.NonCancellable.start
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,13 +13,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         viewBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
-        
+
         setUpShowOssButton()
     }
 
     private fun setUpShowOssButton() {
         viewBinding.showOssButton.setOnClickListener {
-            LibsBuilder().start(this)
+            LibsBuilder().withSearchEnabled(true)
+                .withLicenseShown(true)
+                .withAboutMinimalDesign(true)
+                .withLicenseDialog(true).start(this)
 
         }
 
