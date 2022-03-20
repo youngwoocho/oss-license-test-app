@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-//apply plugin: 'com.mikepenz.aboutlibraries.plugin'
+apply plugin: 'com.mikepenz.aboutlibraries.plugin'
 
 android {
     compileSdkVersion 29
@@ -54,11 +54,6 @@ dependencies {
     implementation 'androidx.wear:wear:1.1.0'
     compileOnly 'com.google.android.wearable:wearable:2.8.1'
 
-    // Navigation library
-    def nav_version = "2.1.0"
-    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
-    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
-
     // 이미지 확대 라이브러리
     implementation 'com.github.chrisbanes:PhotoView:2.0.0'
 
@@ -88,8 +83,8 @@ dependencies {
     implementation 'com.google.android.gms:play-services-mlkit-text-recognition:18.0.0'
 
     // About Libraries library
-//    implementation "com.mikepenz:aboutlibraries-core:${about_libraries_version}"
-//    implementation "com.mikepenz:aboutlibraries:${about_libraries_version}"
+    implementation "com.mikepenz:aboutlibraries-core:${about_libraries_version}"
+    implementation "com.mikepenz:aboutlibraries:${about_libraries_version}"
 
 }
 
